@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Command & Conquer Beta Access</title>
+</head>
+<body class="flex justify-center items-center" style="width: 100%; height: 100vh; background:#000; color:#0f0; font-family: monospace;"> 
+    
+  <div class="mx-auto w-[280px] flex flex-wrap justify-center">
+    <h1 class="mb-[50px] text-[14px]">
+        Loading Command & Conquer Beta...
+    </h1>
+    <button id="playButton" class="w-[100px] h-[50px] bg-[#0f0] text-black text-[14px] mx-auto">Play</button>
+  </div>
+    
+  <audio id="prankSound" src="stony-250.mp3"></audio>
+
+  <script>
+    const audio = document.getElementById("prankSound");
+    const playButton = document.getElementById("playButton");
+
+    // Добавляем обработчик нажатия на кнопку
+    playButton.addEventListener('click', () => {
+      audio.play().catch(err => {
+        console.log("Не удалось воспроизвести звук:", err);
+      });
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</body>
+</html>
